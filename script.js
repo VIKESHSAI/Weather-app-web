@@ -2,7 +2,6 @@ const apiKey = "0e398415e1aadf3fa116e17518080c3f";
 
 let forecastData = [];
 
-/* LOAD */
 window.onload = () => {
   const city = localStorage.getItem("city") || "Bangalore";
 
@@ -16,7 +15,6 @@ window.onload = () => {
   }
 };
 
-/* SEARCH */
 function searchCity() {
   const city = document.getElementById("cityInput").value;
   localStorage.setItem("city", city);
@@ -25,7 +23,7 @@ function searchCity() {
   getToday(city);
 }
 
-/* WEATHER */
+
 async function getWeather(city) {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
@@ -43,7 +41,7 @@ async function getWeather(city) {
   document.getElementById("humidity").innerText = d.main.humidity;
 }
 
-/* TODAY FORECAST */
+
 async function getToday(city) {
   const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
 
@@ -62,7 +60,7 @@ async function getToday(city) {
   });
 }
 
-/* FORECAST */
+
 async function getForecast(city) {
   const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
 
@@ -93,7 +91,7 @@ async function getForecast(city) {
   });
 }
 
-/* MODAL */
+
 function openModal(i) {
   const d = forecastData[i];
 
