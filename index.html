@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkyCast Pro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <h2>🌤 SkyCast Pro</h2>
+
+      <!-- SEARCH CARD -->
+      <div class="search-card">
+        <input type="text" id="cityInput" placeholder="Enter city..." />
+        <button onclick="searchCity()">Search</button>
+      </div>
+
+      <p id="location">---</p>
+
+      <!-- WEATHER -->
+      <div class="current">
+        <h1 id="temp">--°C</h1>
+        <img id="icon" />
+        <p id="desc">---</p>
+      </div>
+
+      <!-- INSIGHT CARD -->
+      <div class="highlight-card">
+        <h3>☀ Weather Insight</h3>
+
+        <div class="highlight-row">
+          <p>Condition</p>
+          <p id="condition">---</p>
+        </div>
+
+        <div class="highlight-row">
+          <p>Humidity</p>
+          <p><span id="humidity">--</span>%</p>
+        </div>
+      </div>
+
+      <!-- TODAY FORECAST -->
+      <h3>Today Forecast</h3>
+      <div id="todayForecast"></div>
+
+      <!-- NAV -->
+      <a href="forecast.html">
+        <button class="nextBtn">Next 4 Day Forecast ➜</button>
+      </a>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

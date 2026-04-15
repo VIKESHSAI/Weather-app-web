@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forecast</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <h2>📅 4 Day Forecast</h2>
+
+      <p id="location">---</p>
+
+      <div class="forecast" id="forecast"></div>
+
+      <a href="index.html">
+        <button class="nextBtn">⬅ Back</button>
+      </a>
+    </div>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">×</span>
+
+        <h3 id="mDate"></h3>
+        <div id="details"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

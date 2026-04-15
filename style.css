@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  color: white;
+
+  background: linear-gradient(-45deg, #1e3c72, #2a5298, #00c6ff, #f7971e);
+  background-size: 400% 400%;
+  animation: move 10s ease infinite;
+
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.app {
+  width: 92%;
+  max-width: 900px;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  text-align: center;
+}
+
+/* SEARCH */
+.search-card {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+}
+
+.search-card input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.search-card button {
+  padding: 10px 15px;
+  border: none;
+  background: orange;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* INSIGHT CARD */
+.highlight-card {
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+}
+
+.highlight-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+/* FORECAST GRID */
+.forecast {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.day {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.day:hover {
+  transform: scale(1.05);
+}
+
+.day img {
+  width: 55px;
+}
+
+/* BUTTON */
+.nextBtn {
+  margin-top: 15px;
+  padding: 10px;
+  border: none;
+  background: orange;
+  border-radius: 10px;
+  color: white;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .forecast {
+    grid-template-columns: 1fr;
+  }
+}
